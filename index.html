@@ -1238,6 +1238,73 @@
       transform: translateY(-3px);
     }
 
+    #hire {
+      background: var(--bg);
+    }
+
+    .hire-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .hire-card {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 18px 20px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(255, 255, 255, .02), rgba(255, 255, 255, .05));
+      color: var(--text);
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .25s ease, border-color .2s ease;
+    }
+
+    .hire-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, .14);
+      border-color: rgba(255, 92, 58, .35);
+    }
+
+    .hc-ic {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .hc-label {
+      font-size: 11.5px;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--muted);
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .hc-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .hc-sub {
+      font-size: 13px;
+      color: var(--muted2);
+      line-height: 1.5;
+    }
+
+    .hc-arrow {
+      font-size: 18px;
+      color: var(--acc1);
+    }
+
     #contact {
       background: var(--bg2);
     }
@@ -1652,7 +1719,7 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="#home" onclick="closeMob()">Home</a><a href="#about" onclick="closeMob()">About</a>
     <a href="#skills" onclick="closeMob()">Skills</a><a href="#projects" onclick="closeMob()">Projects</a>
-    <a href="#experience" onclick="closeMob()">Experience</a><a href="#contact" onclick="closeMob()">Contact</a>
+    <a href="#experience" onclick="closeMob()">Experience</a><a href="#contact" onclick="closeMob()">Contact</a><a href="#hire" onclick="closeMob()">Hire Me</a>
   </div>
   <nav id="nav">
     <div class="nav-inner">
@@ -1664,7 +1731,8 @@
         <a href="#projects" data-s="projects">Projects</a>
         <a href="#experience" data-s="experience">Experience</a>
         <a href="#contact" data-s="contact">Contact</a>
-        <a href="mailto:torahul12091@gmail.com" class="btn-cta">Hire Me →</a>
+        <a href="#hire" data-s="hire">Hire</a>
+        <a href="#hire" class="btn-cta">Hire Me →</a>
       </div>
       <button class="menu-toggle" id="menuBtn" onclick="toggleMob()" style="display:none;">
         <span></span><span></span><span></span>
@@ -2281,19 +2349,68 @@
           </div>
           <div class="fg"><label>Subject</label><input type="text" name="subject" placeholder="Project Inquiry" id="fs"
               required /></div>
-          <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell me about your project..."
-              id="fm" required></textarea></div>
-          <button class="f-submit" id="fBtn" type="submit">Send Message →</button>
-        </form>
-      </div>
+      <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell me about your project..."
+          id="fm" required></textarea></div>
+      <button class="f-submit" id="fBtn" type="submit">Send Message →</button>
+    </form>
+  </div>
+</div>
+</section>
+
+<section id="hire">
+  <div class="wrap">
+    <div class="sec-label">Hire Me</div>
+    <h2 class="sec-title sr">Work With Me<br><span
+        style="background:var(--g2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Pick
+        Your Platform</span></h2>
+    <p class="sec-desc">Choose the channel that fits best—managed contracts on Upwork, professional hiring via
+      LinkedIn, or a direct email to move fast.</p>
+    <div class="hire-grid">
+      <a class="hire-card sr" href="https://www.upwork.com/freelancers/rahuldhiman" target="_blank" rel="noopener">
+        <div class="hc-ic" style="background:rgba(0,217,192,.14);color:#00d9c0;">Up</div>
+        <div>
+          <div class="hc-label">Upwork</div>
+          <div class="hc-title">Fixed-price & hourly gigs</div>
+          <div class="hc-sub">Secure escrow, milestone tracking, and project catalog.</div>
+        </div>
+        <div class="hc-arrow">↗</div>
+      </a>
+      <a class="hire-card sr" href="https://www.linkedin.com/in/rahuldhimanofficial" target="_blank" rel="noopener">
+        <div class="hc-ic" style="background:rgba(132,94,247,.14);color:#845ef7;">in</div>
+        <div>
+          <div class="hc-label">LinkedIn</div>
+          <div class="hc-title">Professional network</div>
+          <div class="hc-sub">Connect for full-time roles, references, and collaborations.</div>
+        </div>
+        <div class="hc-arrow">↗</div>
+      </a>
+      <a class="hire-card sr" href="https://github.com/rahuldhiman509" target="_blank" rel="noopener">
+        <div class="hc-ic" style="background:rgba(0,0,0,.12);color:#111;">GH</div>
+        <div>
+          <div class="hc-label">GitHub</div>
+          <div class="hc-title">Code portfolio</div>
+          <div class="hc-sub">Browse production-grade repos and OSS work.</div>
+        </div>
+        <div class="hc-arrow">↗</div>
+      </a>
+      <a class="hire-card sr" href="mailto:torahul12091@gmail.com">
+        <div class="hc-ic" style="background:rgba(255,184,0,.14);color:#d98200;">✉️</div>
+        <div>
+          <div class="hc-label">Direct</div>
+          <div class="hc-title">Email booking</div>
+          <div class="hc-sub">Fastest way to start a project or schedule a call.</div>
+        </div>
+        <div class="hc-arrow">→</div>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <footer>
     <div class="foot-in">
       <a href="#home" class="foot-logo"><em>RD</em>.dev</a>
       <div class="foot-links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
-          href="#contact">Contact</a></div>
+          href="#contact">Contact</a><a href="#hire">Hire</a></div>
       <div class="foot-copy">© 2025 Rahul Dhiman · Made with ☕ in Mohali</div>
     </div>
   </footer>
@@ -2322,7 +2439,7 @@
     window.addEventListener('scroll', () => {
       document.getElementById('nav').classList.toggle('scrolled', scrollY > 60);
       const y = scrollY + 80;
-      ['home', 'about', 'skills', 'projects', 'experience', 'contact'].forEach(id => {
+      ['home', 'about', 'skills', 'projects', 'experience', 'contact', 'hire'].forEach(id => {
         const s = document.getElementById(id); if (!s) return;
         const l = document.querySelector('.nav-links a[data-s="' + id + '"]');
         if (l) l.classList.toggle('active', y >= s.offsetTop && y < s.offsetTop + s.offsetHeight);
