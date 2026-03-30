@@ -2466,7 +2466,7 @@
     });
 
     (() => {
-      const titles = ['Full-Stack Developer', 'AI & ML Engineer', 'Laravel Expert', 'FinTech Builder', 'Python Enthusiast'];
+      const titles = ['Full-Stack Developer', 'AI & ML Engineer', 'Laravel Expert', 'FinTech Builder', 'Python Developer', 'Cloud & DevOps Specialist', 'Database Architect', 'Software Consultant', 'Tech Problem Solver', 'Open Source Contributor', 'AI Enthusiast', 'Software Craftsman', 'Tech Innovator', 'Code Artisan', 'System Architect', 'Backend Specialist', 'Frontend Developer', 'AI Researcher', 'Data Scientist', 'Software Engineer'];
       let ti = 0, ci = 0, del = false;
       const el = document.getElementById('tw');
       function tick() { const t = titles[ti]; if (!del) { ci++; el.innerHTML = t.slice(0, ci) + '<span class="tc">|</span>'; if (ci === t.length) { del = true; setTimeout(tick, 2000); return; } } else { ci--; el.innerHTML = t.slice(0, ci) + '<span class="tc">|</span>'; if (ci === 0) { del = false; ti = (ti + 1) % titles.length; } } setTimeout(tick, del ? 40 : 80); } tick();
